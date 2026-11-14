@@ -1,0 +1,359 @@
+{
+  "version": "0.1",
+  "status": "base_pedagogique_a_valider",
+  "note": "Prototype pédagogique simplifié. Les flux sont des exemples possibles, pas des échanges systématiques de chaque agent. Les libellés visibles sont séparés des métadonnées de correction. À valider avant intégration définitive.",
+  "agents": {
+    "menages": {
+      "name": "Ménages",
+      "description": "Les personnes et les familles qui consomment, travaillent et épargnent."
+    },
+    "entreprises": {
+      "name": "Entreprises",
+      "description": "Les organisations qui produisent des biens et des services marchands."
+    },
+    "administrations": {
+      "name": "Administrations publiques",
+      "description": "Les organismes publics qui fournissent des services publics et redistribuent les revenus."
+    },
+    "banques": {
+      "name": "Banques",
+      "description": "Les établissements financiers qui collectent l'épargne, assurent les paiements et financent l'économie."
+    },
+    "associations": {
+      "name": "Associations / ONG",
+      "description": "Les organisations qui portent un projet collectif ou une mission d'intérêt général sans distribuer leurs bénéfices à leurs membres."
+    }
+  },
+  "flow_types": {
+    "reel": "Flux réel : bien, service ou travail.",
+    "monetaire": "Flux monétaire : paiement, rémunération, impôt, prêt, don ou autre transfert d'argent."
+  },
+  "flows": [
+    {
+      "id": "F01",
+      "source": "menages",
+      "recipient": "entreprises",
+      "label": "Fournit du travail",
+      "type": "reel",
+      "explanation": "Les personnes travaillent pour les entreprises et mettent leurs compétences à leur service."
+    },
+    {
+      "id": "F02",
+      "source": "menages",
+      "recipient": "entreprises",
+      "label": "Paie les biens achetés",
+      "type": "monetaire",
+      "explanation": "Les ménages paient les biens qu'ils achètent aux entreprises."
+    },
+    {
+      "id": "F03",
+      "source": "menages",
+      "recipient": "entreprises",
+      "label": "Paie des services marchands",
+      "type": "monetaire",
+      "explanation": "Les ménages règlent les services achetés auprès des entreprises."
+    },
+    {
+      "id": "F04",
+      "source": "menages",
+      "recipient": "administrations",
+      "label": "Paie les impôts sur le revenu et les taxes sur la consommation",
+      "type": "monetaire",
+      "explanation": "Les ménages contribuent au financement des administrations publiques."
+    },
+    {
+      "id": "F05",
+      "source": "menages",
+      "recipient": "administrations",
+      "label": "Verse des cotisations sociales sur ses revenus d'activité",
+      "type": "monetaire",
+      "explanation": "Les ménages versent des cotisations qui participent au financement de la protection sociale."
+    },
+    {
+      "id": "F06",
+      "source": "menages",
+      "recipient": "banques",
+      "label": "Dépose son épargne",
+      "type": "monetaire",
+      "explanation": "Les ménages confient une partie de leur épargne à leur banque."
+    },
+    {
+      "id": "F07",
+      "source": "menages",
+      "recipient": "banques",
+      "label": "Rembourse un emprunt",
+      "type": "monetaire",
+      "explanation": "Les ménages remboursent les sommes empruntées à leur banque."
+    },
+    {
+      "id": "F08",
+      "source": "menages",
+      "recipient": "associations",
+      "label": "Effectue un don",
+      "type": "monetaire",
+      "explanation": "Les ménages soutiennent financièrement une association."
+    },
+    {
+      "id": "F09",
+      "source": "entreprises",
+      "recipient": "menages",
+      "label": "Fournit des biens",
+      "type": "reel",
+      "explanation": "Les entreprises vendent des biens aux ménages."
+    },
+    {
+      "id": "F10",
+      "source": "entreprises",
+      "recipient": "menages",
+      "label": "Fournit des services marchands",
+      "type": "reel",
+      "explanation": "Les entreprises réalisent des prestations payantes pour les ménages."
+    },
+    {
+      "id": "F11",
+      "source": "entreprises",
+      "recipient": "menages",
+      "label": "Verse des salaires",
+      "type": "monetaire",
+      "explanation": "Les entreprises rémunèrent le travail des salariés."
+    },
+    {
+      "id": "F12",
+      "source": "entreprises",
+      "recipient": "administrations",
+      "label": "Paie les impôts liés à son activité économique",
+      "type": "monetaire",
+      "explanation": "Les entreprises contribuent au financement des administrations publiques."
+    },
+    {
+      "id": "F13",
+      "source": "entreprises",
+      "recipient": "administrations",
+      "label": "Verse les cotisations sociales patronales",
+      "type": "monetaire",
+      "explanation": "Les entreprises versent les cotisations liées à l'emploi salarié."
+    },
+    {
+      "id": "F14",
+      "source": "entreprises",
+      "recipient": "administrations",
+      "label": "Fournit des biens ou équipements",
+      "type": "reel",
+      "explanation": "Une entreprise peut fournir du matériel ou des équipements à une administration."
+    },
+    {
+      "id": "F15",
+      "source": "entreprises",
+      "recipient": "banques",
+      "label": "Rembourse un emprunt et ses intérêts",
+      "type": "monetaire",
+      "explanation": "Les entreprises remboursent les financements accordés par les banques."
+    },
+    {
+      "id": "F16",
+      "source": "entreprises",
+      "recipient": "associations",
+      "label": "Verse un don ou un mécénat",
+      "type": "monetaire",
+      "explanation": "Une entreprise peut soutenir financièrement une association."
+    },
+    {
+      "id": "F17",
+      "source": "administrations",
+      "recipient": "menages",
+      "label": "Fournit des services publics",
+      "type": "reel",
+      "explanation": "Les administrations mettent à disposition des services publics, par exemple l'école ou certains services municipaux."
+    },
+    {
+      "id": "F18",
+      "source": "administrations",
+      "recipient": "menages",
+      "label": "Verse des prestations sociales",
+      "type": "monetaire",
+      "explanation": "Les administrations versent des aides et prestations aux ménages."
+    },
+    {
+      "id": "F19",
+      "source": "administrations",
+      "recipient": "menages",
+      "label": "Verse des rémunérations aux agents publics",
+      "type": "monetaire",
+      "explanation": "Les administrations rémunèrent les personnes qu'elles emploient."
+    },
+    {
+      "id": "F20",
+      "source": "administrations",
+      "recipient": "entreprises",
+      "label": "Règle les achats de matériel et de prestations nécessaires au fonctionnement des services publics",
+      "type": "monetaire",
+      "explanation": "Les administrations paient les entreprises auxquelles elles achètent des biens ou des prestations."
+    },
+    {
+      "id": "F21",
+      "source": "administrations",
+      "recipient": "entreprises",
+      "label": "Fournit des services et autorisations publics",
+      "type": "reel",
+      "explanation": "Les administrations rendent des services administratifs aux entreprises, par exemple des démarches ou autorisations."
+    },
+    {
+      "id": "F22",
+      "source": "administrations",
+      "recipient": "associations",
+      "label": "Verse des subventions",
+      "type": "monetaire",
+      "explanation": "Les administrations peuvent financer des projets associatifs par des subventions."
+    },
+    {
+      "id": "F23",
+      "source": "administrations",
+      "recipient": "associations",
+      "label": "Met à disposition des équipements ou locaux",
+      "type": "reel",
+      "explanation": "Une collectivité peut mettre à disposition des locaux ou équipements pour une activité associative."
+    },
+    {
+      "id": "F24",
+      "source": "administrations",
+      "recipient": "banques",
+      "label": "Paie les intérêts d'un emprunt",
+      "type": "monetaire",
+      "explanation": "Certaines administrations, notamment des collectivités, paient les intérêts des emprunts contractés auprès d'établissements bancaires."
+    },
+    {
+      "id": "F25",
+      "source": "banques",
+      "recipient": "menages",
+      "label": "Accorde des prêts",
+      "type": "monetaire",
+      "explanation": "Les banques prêtent de l'argent aux ménages, par exemple pour financer un logement."
+    },
+    {
+      "id": "F26",
+      "source": "banques",
+      "recipient": "menages",
+      "label": "Rémunère certains dépôts d'épargne",
+      "type": "monetaire",
+      "explanation": "Les banques versent des intérêts sur certains produits d'épargne."
+    },
+    {
+      "id": "F27",
+      "source": "banques",
+      "recipient": "entreprises",
+      "label": "Accorde des crédits",
+      "type": "monetaire",
+      "explanation": "Les banques financent les investissements ou les besoins de trésorerie des entreprises."
+    },
+    {
+      "id": "F28",
+      "source": "banques",
+      "recipient": "entreprises",
+      "label": "Assure les services de paiement",
+      "type": "reel",
+      "explanation": "Les banques fournissent aux entreprises des services permettant d'encaisser et d'effectuer des paiements."
+    },
+    {
+      "id": "F29",
+      "source": "banques",
+      "recipient": "administrations",
+      "label": "Accorde des financements à des collectivités",
+      "type": "monetaire",
+      "explanation": "Des banques peuvent prêter à certaines collectivités territoriales."
+    },
+    {
+      "id": "F30",
+      "source": "banques",
+      "recipient": "administrations",
+      "label": "Assure les services de paiement de certaines administrations",
+      "type": "reel",
+      "explanation": "Les banques fournissent à certaines administrations des services de gestion et d'exécution des paiements."
+    },
+    {
+      "id": "F31",
+      "source": "banques",
+      "recipient": "associations",
+      "label": "Accorde un prêt",
+      "type": "monetaire",
+      "explanation": "Une banque peut financer un projet ou un investissement associatif."
+    },
+    {
+      "id": "F32",
+      "source": "banques",
+      "recipient": "associations",
+      "label": "Assure les services de compte et de paiement",
+      "type": "reel",
+      "explanation": "Les banques permettent aux associations de gérer leur compte et leurs opérations de paiement."
+    },
+    {
+      "id": "F33",
+      "source": "associations",
+      "recipient": "menages",
+      "label": "Organise des activités collectives",
+      "type": "reel",
+      "explanation": "Les associations proposent des activités sportives, culturelles, éducatives ou solidaires aux personnes."
+    },
+    {
+      "id": "F34",
+      "source": "associations",
+      "recipient": "menages",
+      "label": "Apporte une aide alimentaire ou matérielle",
+      "type": "reel",
+      "explanation": "Certaines associations distribuent des denrées ou du matériel aux personnes qui en ont besoin."
+    },
+    {
+      "id": "F35",
+      "source": "associations",
+      "recipient": "menages",
+      "label": "Accompagne les personnes en difficulté",
+      "type": "reel",
+      "explanation": "Les associations peuvent accompagner des personnes dans leurs démarches ou leur insertion."
+    },
+    {
+      "id": "F36",
+      "source": "associations",
+      "recipient": "menages",
+      "label": "Verse des rémunérations à ses salariés",
+      "type": "monetaire",
+      "explanation": "Les associations qui emploient des salariés leur versent des rémunérations."
+    },
+    {
+      "id": "F37",
+      "source": "associations",
+      "recipient": "entreprises",
+      "label": "Réalise des actions de sensibilisation ou d'accompagnement",
+      "type": "reel",
+      "explanation": "Certaines associations interviennent auprès des entreprises sur l'inclusion, la prévention ou l'environnement."
+    },
+    {
+      "id": "F38",
+      "source": "associations",
+      "recipient": "entreprises",
+      "label": "Règle les achats de biens et de services nécessaires au fonctionnement de l'association",
+      "type": "monetaire",
+      "explanation": "Les associations paient les entreprises pour leurs achats et prestations."
+    },
+    {
+      "id": "F39",
+      "source": "associations",
+      "recipient": "administrations",
+      "label": "Réalise des actions dans le cadre d'un partenariat",
+      "type": "reel",
+      "explanation": "Une association peut réaliser une action d'intérêt général en partenariat avec une administration."
+    },
+    {
+      "id": "F40",
+      "source": "associations",
+      "recipient": "banques",
+      "label": "Paie des frais bancaires",
+      "type": "monetaire",
+      "explanation": "Les associations règlent les frais liés à la tenue de compte et aux services bancaires."
+    }
+  ],
+  "selection_rules": {
+    "required_outgoing_flows_per_agent": 8,
+    "selection_pool_size": 40,
+    "correct_selection_behavior": "Les bonnes réponses restent sélectionnées et sont signalées en vert.",
+    "incorrect_selection_behavior": "Les mauvaises réponses sont désélectionnées et redeviennent disponibles."
+  }
+}
